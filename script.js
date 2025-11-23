@@ -241,7 +241,7 @@ fileInput.addEventListener("change", (e) => {
   reader.readAsText(file);
 });
 
-// ------- Control listeners -------
+//  Control listeners 
 [filterDepartment, filterLevel, filterCredits, filterInstructor, sortBy].forEach(el => {
   el.addEventListener("change", () => {
     activeCourseId = null;
