@@ -1,0 +1,125 @@
+:root {
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px 32px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e6e8ef;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.controls label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+select, input[type="file"] {
+  padding: 4px 6px;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 14px;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 520px;
+  overflow: auto;
+  border: 1px solid #eef0f6;
+  border-radius: 8px;
+}
+
+.course-list li {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef0f6;
+  cursor: pointer;
+  background: white;
+}
+
+.course-list li:hover {
+  background: #f2f6ff;
+}
+
+.course-list li.active {
+  background: #e9f0ff;
+  font-weight: 600;
+}
+
+.details {
+  padding: 6px 2px;
+  white-space: pre-line;
+}
+
+.details .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.details .field {
+  margin: 4px 0;
+}
+
+.details .label {
+  font-weight: 700;
+}
+
+.error {
+  color: #b00020;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.muted {
+  color: #666;
+}
+
+.signature {
+  text-align: center;
+  margin-top: 30px;
+  padding: 12px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
