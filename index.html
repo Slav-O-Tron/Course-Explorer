@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Course Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+  <h1>Course Explorer</h1>
+
+  <!-- Load JSON -->
+  <section class="panel">
+    <h2>Load Courses (JSON)</h2>
+    <input id="fileInput" type="file" accept=".json,application/json" />
+    <p id="fileName" class="muted"></p>
+    <p id="errorBox" class="error" aria-live="polite"></p>
+  </section>
+
+  <!-- Filters + Sort -->
+  <section class="panel">
+    <h2>Sort and Filter</h2>
+    <div class="controls">
+      <label>
+        Department:
+        <select id="filterDepartment" disabled>
+          <option value="All">All</option>
+        </select>
+      </label>
+
+      <label>
+        Level:
+        <select id="filterLevel" disabled>
+          <option value="All">All</option>
+        </select>
+      </label>
+
+      <label>
+        Credits:
+        <select id="filterCredits" disabled>
+          <option value="All">All</option>
+        </select>
+      </label>
+
+      <label>
+        Instructor:
+        <select id="filterInstructor" disabled>
+          <option value="All">All</option>
+        </select>
+      </label>
+
+      <label>
+        Sort By:
+        <select id="sortBy" disabled>
+          <option value="none">None</option>
+          <option value="id-az">ID (A–Z)</option>
+          <option value="id-za">ID (Z–A)</option>
+          <option value="title-az">Title (A–Z)</option>
+          <option value="title-za">Title (Z–A)</option>
+          <option value="semester-early">Semester (Earliest first)</option>
+          <option value="semester-late">Semester (Latest first)</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <!-- Layout: List + Details -->
+  <section class="grid">
+    <section class="panel list-panel">
+      <h2>Courses</h2>
+      <ul id="courseList" class="course-list" aria-live="polite">
+        <li class="muted">Load a JSON file to see courses.</li>
+      </ul>
+    </section>
+
+    <section class="panel details-panel">
+      <h2>Course Details</h2>
+      <div id="courseDetails" class="details muted">
+        Click a course to view details.
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="signature">Website by Tomas Nikolic</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
