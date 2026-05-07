@@ -1,2 +1,2 @@
 # Course-Explore
-Mini project 2 for scripting 2202
+Project for scripting 2202 making it easy to track courses and deadlines for courses
